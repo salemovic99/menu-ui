@@ -1,0 +1,17 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Entrecôte emblem">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4D58D"/>
+      <stop offset="0.5" stop-color="#C9A227"/>
+      <stop offset="1" stop-color="#9A7B1A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" stroke="url(#gold)" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="60" cy="60" r="50" stroke="url(#gold)" stroke-width="0.75" opacity="0.35"/>
+  <!-- Stylised flame / cut over crossed elegance -->
+  <path d="M60 26c8 10 14 18 14 28 0 9-6 16-14 16s-14-7-14-16c0-10 6-18 14-28z" fill="url(#gold)" opacity="0.92"/>
+  <path d="M60 40c4 6 6 10 6 15a6 6 0 11-12 0c0-5 2-9 6-15z" fill="#1C1917"/>
+  <!-- Fork & knife mark -->
+  <path d="M44 78v18M44 78c-2 0-3 2-3 5s1 4 3 4M44 78c2 0 3 2 3 5s-1 4-3 4" stroke="url(#gold)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M76 78c-3 1-5 4-5 8 0 3 2 5 5 5v5" stroke="url(#gold)" stroke-width="2" stroke-linecap="round"/>
+</svg>
