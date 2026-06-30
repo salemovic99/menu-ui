@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Entrecôte Gazette - Les Viandes D'Exception</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Source+Serif+4:ital,wght@0,400;0,600;1,400&amp;family=Archivo+Narrow:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-container": "#e41f13",
+            "inverse-primary": "#c8c6c5",
+            "surface-container": "#f1eee7",
+            "primary-fixed-dim": "#c8c6c5",
+            "tertiary-fixed-dim": "#cac6c4",
+            "on-secondary-fixed-variant": "#930000",
+            "surface-container-highest": "#e5e2db",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#868382",
+            "on-background": "#1c1c18",
+            "inverse-surface": "#31312c",
+            "surface-container-low": "#f6f3ec",
+            "on-secondary-fixed": "#410000",
+            "tertiary": "#000000",
+            "error-container": "#ffdad6",
+            "background": "#fcf9f2",
+            "surface-variant": "#e5e2db",
+            "secondary": "#bc0000",
+            "on-tertiary": "#ffffff",
+            "inverse-on-surface": "#f3f0e9",
+            "surface-dim": "#dcdad3",
+            "primary": "#000000",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#484645",
+            "secondary-fixed-dim": "#ffb4a8",
+            "on-secondary-container": "#fffbff",
+            "primary-fixed": "#e5e2e1",
+            "tertiary-container": "#1c1b1a",
+            "on-surface-variant": "#444748",
+            "on-surface": "#1c1c18",
+            "on-primary-fixed": "#1c1b1b",
+            "outline-variant": "#c4c7c7",
+            "surface-container-high": "#ebe8e1",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#ffdad4",
+            "on-tertiary-fixed": "#1c1b1a",
+            "on-primary-container": "#858383",
+            "surface-bright": "#fcf9f2",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "surface-tint": "#5f5e5e",
+            "tertiary-fixed": "#e6e2df",
+            "surface": "#fcf9f2",
+            "outline": "#747878",
+            "on-primary-fixed-variant": "#474746",
+            "primary-container": "#1c1b1b",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "column-gap": "24px",
+            "stack-lg": "40px",
+            "edge-margin": "32px",
+            "double-rule-gap": "4px",
+            "stack-sm": "8px",
+            "stack-md": "16px",
+            "rule-weight": "1px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Playfair Display"],
+            "body-lg": ["\"Source Serif 4\""],
+            "caption": ["\"Source Serif 4\""],
+            "headline-lg-mobile": ["Playfair Display"],
+            "masthead": ["Playfair Display"],
+            "label-caps": ["Archivo Narrow"],
+            "headline-sm": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "body-md": ["\"Source Serif 4\""]
+          },
+          "fontSize": {
+            "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+            "caption": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-lg-mobile": ["32px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "masthead": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+            "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+            "headline-sm": ["24px", {"lineHeight": "28px", "fontWeight": "700"}],
+            "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "body-md": ["17px", {"lineHeight": "28px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .halftone-overlay {
+      background-image: radial-gradient(#1c1c18 0.5px, transparent 0.5px);
+      background-size: 3px 3px;
+      opacity: 0.05;
+    }
+    .paper-texture {
+      background-color: #fcf9f2;
+      background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+    }
+    .torn-edge {
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L10,1 L20,0 L30,2 L40,0 L50,1 L60,0 L70,3 L80,0 L90,1 L100,0 L100,10 L0,10 Z' fill='white'/%3E%3C/svg%3E");
+      mask-size: 100% 10px;
+      mask-position: bottom;
+      mask-repeat: no-repeat;
+      padding-bottom: 12px;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .vertical-rule {
+      border-left: 1px solid #1c1c18;
+    }
+    .double-rule-top {
+      border-top: 1px solid #1c1c18;
+      margin-top: 4px;
+      padding-top: 4px;
+      border-bottom: 1px solid #1c1c18;
+    }
+  </style>
+</head>
+<body class="paper-texture text-on-background min-h-screen selection:bg-secondary selection:text-white">
+<!-- Header Section (The Masthead) -->
+<header class="w-full px-edge-margin pt-stack-lg max-w-full flex flex-col items-center">
+<div class="w-full flex justify-between items-end border-b border-primary pb-2 mb-1">
+<span class="font-label-caps text-label-caps tracking-widest text-primary uppercase">No. 482 — Genève</span>
+<span class="font-label-caps text-label-caps tracking-widest text-primary uppercase">Mardi, 14 Mai 2024</span>
+</div>
+<div class="py-4 w-full flex flex-col items-center border-b-4 border-double border-primary">
+<h1 class="font-masthead text-masthead text-primary uppercase tracking-tighter leading-none text-center">
+        ENTRECÔTE CAFÉ DE PARIS
+      </h1>
+<p class="font-label-caps text-label-caps text-secondary mt-2 tracking-[0.2em] font-bold">L'ÉDITION DES CARTES — LES VIANDES D'EXCEPTION</p>
+</div>
+<!-- Navigation Links -->
+<nav class="w-full flex justify-center gap-column-gap py-4 border-primary">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#"></a><a class="text-secondary font-bold border-b-2 border-secondary font-label-caps text-label-caps tracking-widest active:scale-95 transition-all" href="https://app-companion-430619.appspot.com/projects/10282917986509766034?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.ch0Jz-JlMrQ.O%2Fd%3D1%2Frs%3DAHpOoo_YD4KoV8fTh_kLhktsiThAm3yJ5A%2Fm%3D__features__#" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; border-color: rgb(188, 0, 0); color: rgb(188, 0, 0); --tw-border-opacity: 1; --tw-text-opacity: 1; outline: none !important; box-shadow: none !important;">LE MENU</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">HISTOIRE</a>
+</nav><div class="w-full border-b border-primary"></div><div class="w-full flex justify-center border-b-4 border-double border-primary py-2 bg-surface-container-low">
+<div class="flex items-center gap-4 font-label-caps text-[11px] tracking-widest">
+<a class="text-secondary font-bold" href="#">MAIN COURSES</a>
+<span class="text-primary/20">|</span>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">ENTRÉES</a>
+<span class="text-primary/20">|</span>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">SIDES</a>
+<span class="text-primary/20">|</span>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">DESSERTS</a>
+<span class="text-primary/20">|</span>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">BEVERAGES</a>
+</div>
+</div>
+</header>
+<!-- Main Content Area: Les Viandes D'Exception -->
+<main class="max-w-full px-edge-margin py-stack-lg">
+<section class="grid grid-cols-1 md:grid-cols-12 gap-column-gap">
+<!-- Side Column / Editorial intro -->
+<aside class="md:col-span-3 border-r border-primary pr-6 flex flex-col gap-stack-md">
+<div class="p-4 bg-surface-container-low border border-primary relative">
+<div class="absolute top-0 left-0 halftone-overlay w-full h-full pointer-events-none"></div>
+<span class="font-label-caps text-[10px] uppercase block mb-2 opacity-70">Editorial</span>
+<h2 class="font-headline-sm text-headline-sm mb-4 leading-tight">The Art of the Cut</h2>
+<p class="font-body-md text-body-md italic mb-4">
+            "Quality is not an act, it is a habit. Our selection for this edition represents the pinnacle of bovine excellence."
+          </p>
+<p class="font-body-md text-body-md text-sm">
+            Each steak is aged for 21 days and served with our legendary 'Café de Paris' butter. We maintain full transparency with nutritional data, ensuring our guests dine with both pleasure and knowledge.
+          </p>
+</div>
+<div class="pt-stack-md border-t-4 border-double border-primary">
+<span class="font-label-caps text-label-caps font-bold text-secondary uppercase tracking-widest">Quick Index</span>
+<ul class="mt-6 flex flex-col gap-4">
+<li class="flex justify-between items-center group cursor-pointer border-b border-primary/10 pb-2 hover:border-secondary transition-colors">
+<span class="font-label-caps text-xs tracking-wider">BLACK ANGUS SERIES</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer border-b border-primary/10 pb-2 hover:border-secondary transition-colors">
+<span class="font-label-caps text-xs tracking-wider">AUSTRALIAN PREMIUM</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer border-b border-primary/10 pb-2 hover:border-secondary transition-colors">
+<span class="font-label-caps text-xs tracking-wider">WAGYU SELECTION</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform text-secondary">arrow_forward</span>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Meat Cards Grid -->
+<div class="md:col-span-9">
+<div class="mb-stack-md flex justify-between items-end border-b-2 border-primary pb-2">
+<h2 class="font-headline-md text-headline-md uppercase tracking-tight"><span class="" style='color: rgb(252, 249, 242); font-family: "Archivo Narrow"; font-size: 14px; letter-spacing: 2.8px; text-align: center; background-color: rgb(0, 0, 0);'>Main Courses - La Pièce de Résistance</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-column-gap">
+<!-- Card 1: Tenderloin Black Angus -->
+<article class="flex flex-col border border-primary bg-white group hover:scale-[1.01] transition-all duration-300 duration-700 opacity-0 opacity-100">
+<div class="relative h-64 overflow-hidden border-b border-primary">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" data-alt="A premium close-up of a raw Tenderloin Black Angus steak resting on a rustic wooden board. The meat has deep red coloring and fine marbling, highlighted by soft warm studio lighting. The background is a minimalist, elegant dark surface that contrasts with the vibrant meat. The scene feels sophisticated and high-end, evoking the luxury of a fine Parisian brasserie." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBth4ylBleZyRkfBgPkh1JsV-5HNzS_PmkenJbPibrfH5VAf_ogMwF5p9h3rHQxkfjJ600BxsnQ77xNjurcDNY8MTxDRNGDH51bdYREBr2HbXpd__oPPYIFgYPluSkluzT8SOV0_o64nij_qlNwDdNOngQk9dRq_VLpuA5z6OInRXQK--5yvX0I5spYr6q21YMsido2L7eI5Bw9cn_UzOUBu9mZfI4qL2Xm5FokOBlbweOwGIoLl8ZNyQ"/>
+<div class="absolute top-2 left-2 bg-primary text-white font-label-caps text-[10px] px-2 py-1">PREMIUM CUT</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-lg leading-tight uppercase">Tenderloin Black Angus</h3>
+<span class="font-label-caps font-bold">390.00 <span class="text-[10px]">SAR</span></span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">
+                A premium cut of tenderloin from the Black Angus breed, renowned for producing the finest meats with a distinct flavor and exceptionally smooth texture.
+              </p>
+<!-- Nutrition Stats -->
+<div class="mt-auto pt-4 border-t border-surface-variant flex flex-col gap-2">
+<div class="flex items-center gap-4 text-[11px] font-label-caps">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-sm">local_fire_department</span> 880 CAL</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-on-surface-variant text-sm">directions_walk</span> 228 MIN</div>
+</div>
+<div class="grid grid-cols-3 gap-1">
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">PRO</span>
+<span class="block font-bold text-xs">45g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">CAR</span>
+<span class="block font-bold text-xs">5g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">FAT</span>
+<span class="block font-bold text-xs">75g</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="mt-4 flex gap-2">
+</div>
+</div>
+</article>
+<!-- Card 2: Striploin Black Angus -->
+<article class="flex flex-col border border-primary bg-white group hover:scale-[1.01] transition-all duration-300 duration-700 opacity-0 opacity-100">
+<div class="relative h-64 overflow-hidden border-b border-primary">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" data-alt="A perfectly seared Black Angus Striploin steak, sliced to reveal a juicy medium-rare center. The crust is dark and caramelized from a high-heat grill. The meat is presented on a minimalist white ceramic plate with a subtle drizzle of reduction. The lighting is crisp and editorial, highlighting the texture and richness of the protein against an off-white tablecloth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB5nqULNY8knwh9aL5I6Lqt29qRGozda_792_8vNvop9lr5k1HAVT3MlfNJPYINfdJvmUvww2Jy6HsTnQQBCglyx2U67OTyKMg1HetU-kN-IZM31RtGreVpDmpJqbCluS-SvHYX7GxOPTkPuIBXmZW8Yb19Ses819UvwtBWqNZmSQKB_YE9NNHz9aypwv0oktMtId50evzMJzaLb2jX7MPOUr99ShW4seWc3Z-HY_c05Di0wv6ulDoCw"/>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-lg leading-tight uppercase">Striploin Black Angus</h3>
+<span class="font-label-caps font-bold">235.00 <span class="text-[10px]">SAR</span></span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">
+                A hand-selected Black Angus striploin, offering deep beefy flavor with perfectly balanced tenderness.
+              </p>
+<div class="mt-auto pt-4 border-t border-surface-variant flex flex-col gap-2">
+<div class="flex items-center gap-4 text-[11px] font-label-caps">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-sm">local_fire_department</span> 580 CAL</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-on-surface-variant text-sm">directions_walk</span> 142 MIN</div>
+</div>
+<div class="grid grid-cols-3 gap-1">
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">PRO</span>
+<span class="block font-bold text-xs">47g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">CAR</span>
+<span class="block font-bold text-xs">5g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">FAT</span>
+<span class="block font-bold text-xs">37g</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+</div>
+</div>
+</article>
+<!-- Card 3: Australian Striploin Fillet -->
+<article class="flex flex-col border border-primary bg-white group hover:scale-[1.01] transition-all duration-300 duration-700 opacity-0 opacity-100">
+<div class="relative h-64 overflow-hidden border-b border-primary">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" data-alt="An Australian Striploin Fillet showcased raw in a pristine butcher's display style. The meat is vibrant cherry red with a clean white fat cap. The lighting is high-key and professional, focusing on the fine grain of the muscle fibers. The composition is structured and clean, following a modern editorial aesthetic with high contrast and sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTwZDmYX0Y_zwzjrWWD41QXRM1E1smKVQ2LzcIJAvoT6-EcXeoTkE8NwkBlOb7ko9Axr1RxzcYHfVcb33cOvcYF7a_ulOv8K98S00Dp8wtvI1LdSuMKEW1h612syENQ2OyyJScyUzgmFW4U2K6szdjoWyLZQsvXTlpamE4i5UjP9Gw_pGRL5OlIg337VOKXe905KoXExtrWS_HK0snkDwfmPbKAO8hrrbg06AfBbAv2zPYhCvIqxdiEA"/>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-lg leading-tight uppercase">Australian Striploin Fillet</h3>
+<span class="font-label-caps font-bold">199.00 <span class="text-[10px]">SAR</span></span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">
+                A piece from the back with a strong flavor and moderate tenderness.
+              </p>
+<div class="mt-auto pt-4 border-t border-surface-variant flex flex-col gap-2">
+<div class="flex items-center gap-4 text-[11px] font-label-caps">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-sm">local_fire_department</span> 550 CAL</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-on-surface-variant text-sm">directions_walk</span> 142 MIN</div>
+</div>
+<div class="grid grid-cols-3 gap-1">
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">PRO</span>
+<span class="block font-bold text-xs">47g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">CAR</span>
+<span class="block font-bold text-xs">5g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">FAT</span>
+<span class="block font-bold text-xs">37g</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+</div>
+</div>
+</article>
+<!-- Card 4: Australian Tenderloin Fillet -->
+<article class="flex flex-col border border-primary bg-white group hover:scale-[1.01] transition-all duration-300 duration-700 opacity-0 opacity-100">
+<div class="relative h-64 overflow-hidden border-b border-primary">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" data-alt="A lean Australian Tenderloin Fillet prepared with minimalist seasoning. The steak is centered in the frame, surrounded by a dramatic cast shadow on a dark slate background. The image style is moody yet clear, with highlights on the moisture and texture of the rare-cooked meat. A professional culinary photography approach that emphasizes the lean, high-quality nature of the cut." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyvTp6OnUfAakuZ_1sbFH1ICbf-ZyRsVXjvJ3HaD2MKJcttfIWzyrXQZWkakZh-943U29AaV7O_tN0o61KbGNjsMc5kZYulzZqRrJY0ObtyelpdLc1f4x-_UAIFKFJi1TQ5_3OMDjfxIiZZNeYXA7mYz_2dc2tWxiqwOT094aEgF7WEpPBn6ovFJptM8Z0G114_h-TurcD9LfnAMrbLVl9u0yeuzdPLjuN1YdhplNV_Q5jIrGwl8hSZQ"/>
+<div class="absolute top-2 left-2 bg-on-background text-white font-label-caps text-[10px] px-2 py-1">LEAN CHOICE</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-lg leading-tight uppercase">Australian Tenderloin</h3>
+<span class="font-label-caps font-bold">295.00 <span class="text-[10px]">SAR</span></span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">
+                A tender, lean piece of high-quality beef back fillet, low in fat.
+              </p>
+<div class="mt-auto pt-4 border-t border-surface-variant flex flex-col gap-2">
+<div class="flex items-center gap-4 text-[11px] font-label-caps">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-sm">local_fire_department</span> 700 CAL</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-on-surface-variant text-sm">directions_walk</span> 181 MIN</div>
+</div>
+<div class="grid grid-cols-3 gap-1">
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">PRO</span>
+<span class="block font-bold text-xs">62g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">CAR</span>
+<span class="block font-bold text-xs">5g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">FAT</span>
+<span class="block font-bold text-xs">47g</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+</div>
+</div>
+</article>
+<!-- Card 5: Wagyu Steak 7+ -->
+<article class="flex flex-col border border-primary bg-white group hover:scale-[1.01] transition-all duration-300 duration-700 opacity-0 opacity-100">
+<div class="relative h-64 overflow-hidden border-b border-primary">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" data-alt="A Wagyu Steak 7+ exhibiting extraordinary intramuscular fat marbling. The raw cut resembles fine marble with intricate webs of white fat against deep pink meat. The lighting is cinematic, utilizing a side-lit approach to emphasize the glistening texture. The aesthetic is ultra-luxurious, emphasizing the global prestige of the Wagyu breed in a high-contrast newspaper editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb6i5lLbkEWfUUyoNuhposPtLRUgxZJEaD1JAnska2Ur58pkry-BJTavfNmPi75grA8zkdwLtEB17uE7-DC0yjvR9mUknWrieSWgwriofgTg5rk58j7LVjhnsRIHUsVbM9WEOoFl3csAMincat4cRRlgYthSmzS5ZqkKw57bpmyO3yweg22SnYfJLCbulC-4tD0gPjS5GqBdwWLesD7j9EHcNt47VXG7ha5kBZlXBkWCHLl6XIPmCEwg"/>
+<div class="absolute top-2 left-2 bg-secondary text-white font-label-caps text-[10px] px-2 py-1">MARBLING 7+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-lg leading-tight uppercase">Wagyu Steak 7+</h3>
+<span class="font-label-caps font-bold">445.00 <span class="text-[10px]">SAR</span></span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">
+                A Wagyu striploin, globally renowned for its supreme quality, with a perfectly balanced marbling that adds an irresistible blend of flavors.
+              </p>
+<div class="mt-auto pt-4 border-t border-surface-variant flex flex-col gap-2">
+<div class="flex items-center gap-4 text-[11px] font-label-caps">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-sm">local_fire_department</span> 790 CAL</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-on-surface-variant text-sm">directions_walk</span> 205 MIN</div>
+</div>
+<div class="grid grid-cols-3 gap-1">
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">PRO</span>
+<span class="block font-bold text-xs">42g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">CAR</span>
+<span class="block font-bold text-xs">6g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">FAT</span>
+<span class="block font-bold text-xs">67g</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+</div>
+</div>
+</article>
+<!-- Card 6: Wagyu Steak 9+ -->
+<article class="flex flex-col border border-primary bg-white group hover:scale-[1.01] transition-all duration-300 duration-700 opacity-0 opacity-100">
+<div class="relative h-64 overflow-hidden border-b border-primary">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" data-alt="The ultimate Wagyu Steak 9+ with extreme marbling that makes the meat appear almost white. The shot is an extreme macro, highlighting the buttery richness of the fat cells. Lighting is soft and diffuse, mimicking natural daylight in a high-end kitchen. The overall mood is one of pinnacle excellence and rare indulgence, perfectly capturing the flagship item of the menu." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgv-ycJFVHJO7bJcomFAJ_-VyaKa61ZlLhotln0FqS_f9mbxKkFi0eyfFoW4iUXgOVIsRMRNkYJZELAMognFpG1tSeQRAWi8Zb9BC3fONzKnIqVMOMV6qnzS1emD0bb5WEnK1gFfis8n22EMKcUgdFGZrnBZdjsEHo16wAHdeSLuutWC376Dbex8qyJDPKo23uoq-1s5I_OKIPKnMP39f86lHL0T-JCY6pKFmXfzweBSJLXLldAfduHQ"/>
+<div class="absolute top-2 left-2 bg-secondary text-white font-label-caps text-[10px] px-2 py-1">ULTIMATE 9+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-lg leading-tight uppercase">Wagyu Steak 9+</h3>
+<span class="font-label-caps font-bold">575.00 <span class="text-[10px]">SAR</span></span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">
+                A Wagyu striploin, known worldwide for its top quality, with high marbling for steak lovers who appreciate rich beef flavor.
+              </p>
+<div class="mt-auto pt-4 border-t border-surface-variant flex flex-col gap-2">
+<div class="flex items-center gap-4 text-[11px] font-label-caps">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-sm">local_fire_department</span> 1000 CAL</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-on-surface-variant text-sm">directions_walk</span> 259 MIN</div>
+</div>
+<div class="grid grid-cols-3 gap-1">
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">PRO</span>
+<span class="block font-bold text-xs">35g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">CAR</span>
+<span class="block font-bold text-xs">6g</span>
+</div>
+<div class="bg-surface-container py-1 px-2 text-center rounded-sm">
+<span class="block text-[9px] uppercase opacity-60">FAT</span>
+<span class="block font-bold text-xs">94g</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<!-- Re-engineered Footer -->
+<footer class="w-full bg-surface-container border-t-4 border-double border-primary mt-stack-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full halftone-overlay pointer-events-none opacity-[0.03]"></div>
+<div class="max-w-7xl mx-auto px-edge-margin py-stack-lg relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-column-gap border-b border-primary pb-stack-lg">
+<div class="md:col-span-4 flex flex-col">
+<h3 class="font-masthead text-headline-md text-primary uppercase mb-4 tracking-tighter">ENTRECÔTE</h3>
+<p class="font-body-md text-sm italic text-on-surface-variant max-w-xs mb-6">
+          "L'excellence de la viande, servie avec passion depuis 1930."
+        </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all rounded-full" href="#"><span class="material-symbols-outlined text-base">public</span></a>
+<a class="w-10 h-10 border border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all rounded-full" href="#"><span class="material-symbols-outlined text-base">mail</span></a>
+</div>
+</div>
+<div class="md:col-span-2 flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps font-bold text-secondary tracking-widest">HEADQUARTERS</h4>
+<ul class="flex flex-col gap-1 font-body-md text-sm">
+<li>Rue du Mont-Blanc 26</li>
+<li>1201 Genève</li>
+<li>Switzerland</li>
+<li class="mt-2 font-bold">+41 22 732 84 50</li>
+</ul>
+</div>
+<div class="md:col-span-2 flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps font-bold text-secondary tracking-widest">EDITIONS</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-label-caps text-xs hover:text-secondary transition-colors" href="#">Riyadh Edition</a></li>
+<li><a class="font-label-caps text-xs hover:text-secondary transition-colors" href="#">Dubai Edition</a></li>
+<li><a class="font-label-caps text-xs hover:text-secondary transition-colors" href="#">London Edition</a></li>
+<li><a class="font-label-caps text-xs hover:text-secondary transition-colors" href="#">Geneva Flagship</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps font-bold text-secondary tracking-widest">GAZETTE SUBSCRIPTION</h4>
+<p class="font-body-md text-xs text-on-surface-variant mb-2">Receive our latest culinary editions and exclusive news.</p>
+<div class="flex border border-primary">
+<input class="bg-transparent border-none flex-1 font-label-caps text-[10px] px-3 focus:ring-0" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="bg-primary text-white px-4 py-2 font-label-caps text-[10px] hover:bg-secondary transition-colors">JOIN</button>
+</div>
+<div class="mt-4 grid grid-cols-3 gap-2">
+<a class="font-label-caps text-[9px] hover:text-secondary uppercase" href="#">Legal</a>
+<a class="font-label-caps text-[9px] hover:text-secondary uppercase" href="#">Press</a>
+<a class="font-label-caps text-[9px] hover:text-secondary uppercase" href="#">Heritage</a>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-caption text-[11px] text-on-surface-variant uppercase tracking-widest">
+        © 1930 Entrecôte Café de Paris. All Rights Reserved.
+      </p>
+<div class="flex gap-8 font-label-caps text-[11px] tracking-widest">
+<a class="hover:text-secondary" href="#">CONTACT</a>
+<a class="hover:text-secondary" href="#">LOCATIONS</a>
+</div>
+</div>
+</div>
+<div class="w-full h-8 halftone-overlay border-t border-primary/10"></div>
+</footer>
+<script>
+    // Micro-interactions for buttons
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('mousedown', () => {
+        button.style.transform = 'scale(0.95)';
+      });
+      button.addEventListener('mouseup', () => {
+        button.style.transform = 'scale(1)';
+      });
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'scale(1)';
+      });
+    });
+
+    // Simple scroll reveal for cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100');
+          entry.target.classList.remove('translate-y-4');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('article').forEach(card => {
+      card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+      observer.observe(card);
+    });
+  </script>
+</body></html>

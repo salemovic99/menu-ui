@@ -666,7 +666,7 @@ function openItem(id) {
   const badges = it.badges.map(badgeHTML).join('');
   const allerg = it.allergens.length
     ? it.allergens.map(a => `<span class="allergen">${svg('check')}${a}</span>`).join('')
-    : `<span class="allergen" style="background:rgba(91,191,123,.1);border-color:rgba(91,191,123,.3);color:#9fe3b5">${svg('check')}No major allergens</span>`;
+    : `<span class="allergen" style="border-color:#1c1c18;color:#1c1c18">${svg('check')}No major allergens</span>`;
 
   modalPanel.innerHTML = `
     <div class="modal__hero">
