@@ -419,12 +419,15 @@ function renderFeatured() {
       <button class="btn btn--gold ripple" data-id="${sp.id}">View dish ${svg('arrow')}</button>
     </div>`;
 
-  // Best sellers
-  const best = [...MENU].sort((a, b) => b.pop - a.pop).slice(0, 8);
-  $('#bestTrack').innerHTML = best.map((it, i) => miniHTML(it, `#${i + 1} loved`)).join('');
+  // Best sellers (optional section)
+  const bestTrack = $('#bestTrack');
+  if (bestTrack) {
+    const best = [...MENU].sort((a, b) => b.pop - a.pop).slice(0, 8);
+    bestTrack.innerHTML = best.map((it, i) => miniHTML(it, `#${i + 1} loved`)).join('');
+    hydrateImages(bestTrack);
+  }
 
   hydrateImages($('#chefTrack'));
-  hydrateImages($('#bestTrack'));
   observeReveals($('#chefPicks'));
 }
 
@@ -732,13 +735,13 @@ function openSheet() {
   scrim.hidden = false; sheet.hidden = false;
   requestAnimationFrame(() => { scrim.classList.add('is-open'); sheet.classList.add('is-open'); });
   document.body.style.overflow = 'hidden';
-  $('#searchToggle').setAttribute('aria-expanded', 'true');
+  $('#searchToggle')?.setAttribute('aria-expanded', 'true');
   setTimeout(() => $('#searchInput').focus(), 280);
 }
 function closeSheet() {
   scrim.classList.remove('is-open'); sheet.classList.remove('is-open');
   document.body.style.overflow = '';
-  $('#searchToggle').setAttribute('aria-expanded', 'false');
+  $('#searchToggle')?.setAttribute('aria-expanded', 'false');
   setTimeout(() => { scrim.hidden = true; sheet.hidden = true; }, reduceMotion ? 0 : 320);
 }
 
@@ -777,12 +780,12 @@ let ticking = false;
 
 function onScroll() {
   const y = window.scrollY;
-  header.classList.toggle('is-stuck', y > 30);
+  header?.classList.toggle('is-stuck', y > 30);
   // hero parallax
   if (heroBg && !reduceMotion && y < window.innerHeight) heroBg.style.transform = `translateY(${y * 0.4}px) scale(1.05)`;
   // scroll progress
   const h = document.documentElement.scrollHeight - window.innerHeight;
-  progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+  if (progress) progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
   // back-to-top fab
   topFab.hidden = y < window.innerHeight * 0.8;
   ticking = false;
@@ -844,8 +847,8 @@ $('#modalScrim').addEventListener('click', closeItem);
 modal.addEventListener('click', (e) => { if (e.target.closest('#modalClose')) closeItem(); });
 
 // Sheet open/close
-$('#searchToggle').addEventListener('click', openSheet);
-$('#filterToggle').addEventListener('click', openSheet);
+$('#searchToggle')?.addEventListener('click', openSheet);
+$('#filterToggle')?.addEventListener('click', openSheet);
 $('#searchFab').addEventListener('click', openSheet);
 $('#sheetClose').addEventListener('click', closeSheet);
 $('#scrim').addEventListener('click', closeSheet);
