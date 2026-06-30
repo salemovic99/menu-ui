@@ -29,6 +29,22 @@
 
   
   <main id="top">
+    <!-- ============ MASTHEAD (nameplate) ============ -->
+    <header class="masthead" aria-label="Masthead">
+      <div class="masthead__folio">
+        <span>No. 482 — Genève</span>
+        <span id="folioDate">Lundi, 30 Juin 2026</span>
+      </div>
+      <div class="masthead__plate">
+        <p class="masthead__name">Entrecôte Café de Paris</p>
+        <p class="masthead__sub">L'Édition des Cartes — Les Viandes d'Exception</p>
+      </div>
+      <nav class="masthead__nav" aria-label="Sections">
+        <a class="masthead__link is-active" href="#menu" aria-current="page" data-scroll>Le Menu</a>
+        <a class="masthead__link" href="#hero">Histoire</a>
+      </nav>
+    </header>
+
     <!-- ============ HERO ============ -->
     <section class="hero" id="hero" aria-label="Welcome to Entrecôte">
       <div class="hero__bg" id="heroBg" aria-hidden="true"></div>
@@ -38,10 +54,10 @@
       <span class="float-deco float-deco--3" aria-hidden="true"></span>
 
       <div class="hero__content" id="heroContent">
-        <p class="hero__eyebrow reveal">Chez Boubier · Geneva · Est. 1930</p>
+        <p class="hero__eyebrow reveal">La Une · Chez Boubier · Est. 1930</p>
         <h1 class="hero__title" style="text-align:center">
-          <span class="reveal" style="--d:.05s">Entrecôte</span>
-          <span class="hero__title-sub reveal" style="--d:.15s">Café de Paris</span>
+          <span class="reveal" style="--d:.05s">The Secret Sauce</span>
+          <span class="hero__title-sub reveal" style="--d:.15s">Poured tableside since 1930</span>
         </h1>
         <p class="hero__lead reveal" style="--d:.25s">
           One cut, one sauce — poured at your table over a living flame. A Geneva tradition, unchanged since 1930. <em>Toujours imitée, jamais égalée.</em>
@@ -193,6 +209,19 @@
   <!-- ============ TOAST ============ -->
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
+  <script>
+    /* Masthead folio date — French long form, falls back to the static markup */
+    (function () {
+      var el = document.getElementById('folioDate');
+      if (!el) return;
+      try {
+        var d = new Intl.DateTimeFormat('fr-FR', {
+          weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+        }).format(new Date());
+        el.textContent = d.charAt(0).toUpperCase() + d.slice(1);
+      } catch (e) { /* keep static fallback */ }
+    })();
+  </script>
   <script src="script.js" defer></script>
 </body>
 </html>

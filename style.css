@@ -196,6 +196,59 @@ h1, h2, h3, .display {
 
 .scroll-progress { position: absolute; bottom: -1px; left: 0; height: 2px; width: 0%; background: var(--red); transition: width 80ms linear; z-index: 1; }
 
+/* ---------- 4b. MASTHEAD (front-page nameplate) ---------- */
+.masthead {
+  max-width: var(--maxw); margin-inline: auto;
+  padding: calc(var(--s-5) + var(--safe-t)) var(--edge) 0;
+}
+
+/* Folio line — edition number / city / date */
+.masthead__folio {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-4);
+  padding-bottom: var(--s-2);
+  border-bottom: 1px solid var(--ink);
+  font-family: 'Archivo Narrow', 'Arial Narrow', sans-serif;
+  text-transform: uppercase; letter-spacing: .18em; font-weight: 600;
+  font-size: 12px; color: var(--ink);
+}
+.masthead__folio span { white-space: nowrap; }
+
+/* Nameplate — the publication's name, set big and centred */
+.masthead__plate {
+  text-align: center;
+  padding: var(--s-5) 0 var(--s-4);
+  border-bottom: 4px double var(--ink);
+}
+.masthead__name {
+  font-family: 'Playfair Display', Georgia, serif; font-weight: 900;
+  text-transform: uppercase; letter-spacing: -.02em; line-height: .9;
+  font-size: clamp(2rem, 8.2vw, 5rem); color: var(--ink);
+}
+.masthead__sub {
+  margin-top: var(--s-3);
+  font-family: 'Archivo Narrow', 'Arial Narrow', sans-serif;
+  text-transform: uppercase; letter-spacing: .2em; font-weight: 700;
+  font-size: 12px; color: var(--ink-2);
+}
+
+/* Section index — flush row of ruled links */
+.masthead__nav { display: flex; justify-content: center; border-bottom: 1px solid var(--ink); }
+.masthead__link {
+  font-family: 'Archivo Narrow', 'Arial Narrow', sans-serif;
+  text-transform: uppercase; letter-spacing: .12em; font-weight: 600; font-size: 14px;
+  color: var(--ink-2); padding: var(--s-3) var(--s-5);
+  border-right: 1px solid var(--line-soft);
+  transition: color var(--t-fast), background var(--t-fast);
+}
+.masthead__link:first-child { border-left: 1px solid var(--line-soft); }
+.masthead__link:hover { color: var(--ink); }
+.masthead__link.is-active { color: var(--paper); background: var(--ink); }
+
+@media (max-width: 560px) {
+  .masthead__folio { letter-spacing: .1em; font-size: 10.5px; gap: var(--s-2); }
+  .masthead__link { padding: var(--s-2) var(--s-3); font-size: 12.5px; letter-spacing: .08em; }
+}
+
 /* ---------- 5. HERO (the masthead front page) ---------- */
 .hero {
   position: relative; min-height: 92svh;
