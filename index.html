@@ -27,27 +27,7 @@
 
   <a class="skip-link" href="#menu">Skip to menu</a>
 
-  <!-- ============ STICKY HEADER ============ -->
-  <header class="site-header" id="siteHeader">
-    <div class="site-header__inner">
-      <a class="brand" href="#top" aria-label="Entrecôte home">
-        <img src="assets/icons/logo.svg" alt="" width="34" height="34" class="brand__mark" />
-        <span class="brand__name">Entrecôte</span>
-      </a>
-      <div class="site-header__actions">
-        <a class="site-nav__link" href="menu.html">The Card</a>
-        <button class="icon-btn" id="searchToggle" aria-label="Search the menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
-        </button>
-        <button class="icon-btn" id="filterToggle" aria-label="Filter and sort" aria-expanded="false">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
-        </button>
-      </div>
-    </div>
-    <!-- scroll progress -->
-    <span class="scroll-progress" id="scrollProgress"></span>
-  </header>
-
+  
   <main id="top">
     <!-- ============ HERO ============ -->
     <section class="hero" id="hero" aria-label="Welcome to Entrecôte">
@@ -59,25 +39,17 @@
 
       <div class="hero__content" id="heroContent">
         <p class="hero__eyebrow reveal">Chez Boubier · Geneva · Est. 1930</p>
-        <h1 class="hero__title">
+        <h1 class="hero__title" style="text-align:center">
           <span class="reveal" style="--d:.05s">Entrecôte</span>
           <span class="hero__title-sub reveal" style="--d:.15s">Café de Paris</span>
         </h1>
         <p class="hero__lead reveal" style="--d:.25s">
           One cut, one sauce — poured at your table over a living flame. A Geneva tradition, unchanged since 1930. <em>Toujours imitée, jamais égalée.</em>
         </p>
-        <div class="hero__stats reveal" style="--d:.35s" id="heroStats">
-          <div class="stat"><span class="stat__num" data-count="5">0</span><span class="stat__label">Signature Cuts</span></div>
-          <div class="stat stat--div" aria-hidden="true"></div>
-          <div class="stat"><span class="stat__num" data-count="95">0</span><span class="stat__label">Years of Secret</span></div>
-          <div class="stat stat--div" aria-hidden="true"></div>
-          <div class="stat"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">Halal Certified</span></div>
-        </div>
-        <a href="#menu" class="btn btn--gold reveal ripple" style="--d:.45s" data-scroll>
+        <a href="#menu" class="btn btn--gold reveal ripple" style="--d:.45s;display:flex;width:fit-content;margin-inline:auto" data-scroll>
           Browse the Menu
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
         </a>
-      </div>
 
       <div class="hero__scroll-cue" aria-hidden="true"><span></span></div>
     </section>
@@ -111,14 +83,7 @@
         <article class="special reveal" id="specialCard"><!-- injected --></article>
       </section>
 
-      <!-- Best sellers strip -->
-      <section class="block" id="bestSellers" aria-label="Best sellers">
-        <div class="section-head reveal">
-          <span class="section-head__kicker">Guest Favourites</span>
-          <h2 class="section-head__title">Best Sellers</h2>
-        </div>
-        <div class="hscroll" id="bestTrack"><!-- mini cards injected --></div>
-      </section>
+      
 
       <!-- Results meta (search/filter) -->
       <div class="results-meta" id="resultsMeta" hidden>
