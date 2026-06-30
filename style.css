@@ -378,9 +378,21 @@ h1, h2, h3, .display {
 .menu-grid { display: grid; gap: var(--s-5); grid-template-columns: 1fr; }
 
 .card {
-  background: var(--bg-2); border: 1px solid var(--ink); border-radius: 0;
+  background: var(--bg-2); border: none; border-radius: 0;
   overflow: hidden; position: relative; isolation: isolate;
   transition: transform var(--t-mid) var(--ease), box-shadow var(--t-mid);
+}
+
+/* Text-only card variant — no image, no border, badges read as classified tags */
+.card--text { background: transparent; }
+.card--text .card__body { padding: var(--s-4) 0 var(--s-5); }
+.card--text .card__head { padding-right: 46px; }
+.card--text .card__badges {
+  position: static; margin-bottom: var(--s-3); max-width: none;
+}
+.card--text .fav-btn { top: var(--s-3); right: 0; }
+@media (hover:hover) {
+  .card--text:hover { transform: translateY(-2px); box-shadow: none; }
 }
 @media (hover:hover) {
   .card:hover { transform: translate(-3px,-3px); box-shadow: var(--hard); }   /* clipping lifts off the page */
@@ -663,7 +675,7 @@ h1, h2, h3, .display {
   .fab { width: 58px; height: 58px; }
 }
 @media (min-width: 1024px) {
-  .menu-grid { grid-template-columns: repeat(3, 1fr); }
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
   .carousel__track > .card { flex-basis: 32%; }
   .fab-stack { right: var(--edge); }
 }

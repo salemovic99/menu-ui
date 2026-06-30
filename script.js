@@ -298,17 +298,12 @@ function cardHTML(item, idx = 0) {
   const isFav = state.favs.has(item.id);
   const badges = item.badges.filter(b => b !== 'halal').slice(0, 3).map(badgeHTML).join('');
   return `
-  <article class="card reveal" data-id="${item.id}" style="--d:${Math.min(idx * 0.05, 0.3)}s" tabindex="0" role="button" aria-label="${item.name}, ${money(item.price)}. View details">
-    <div class="card__media">
-      <div class="card__img">
-        <img data-src="${item.img}" alt="${item.name}" width="760" height="475" loading="lazy" decoding="async" />
-      </div>
-      <div class="card__badges">${badges}</div>
-      <button class="fav-btn ${isFav ? 'is-fav' : ''} ripple" data-fav="${item.id}" aria-pressed="${isFav}" aria-label="${isFav ? 'Remove from' : 'Add to'} favourites">
-        ${svg('heart')}
-      </button>
-    </div>
+  <article class="card card--text reveal" data-id="${item.id}" style="--d:${Math.min(idx * 0.05, 0.3)}s" tabindex="0" role="button" aria-label="${item.name}, ${money(item.price)}. View details">
+    <button class="fav-btn ${isFav ? 'is-fav' : ''} ripple" data-fav="${item.id}" aria-pressed="${isFav}" aria-label="${isFav ? 'Remove from' : 'Add to'} favourites">
+      ${svg('heart')}
+    </button>
     <div class="card__body">
+      ${badges ? `<div class="card__badges">${badges}</div>` : ''}
       <div class="card__head">
         <h3 class="card__name">${item.name}</h3>
         <span class="card__price">${money(item.price)}</span>
