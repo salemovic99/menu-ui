@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#fcf9f2" />
+  <meta name="description" content="The Card — Entrecôte Café de Paris. Chez Boubier, Geneva, est. 1930. The cuts, the secret sauce, and the ritual of the table." />
+  <title>The Card · Entrecôte Café de Paris</title>
+
+  <!-- Fonts: Playfair Display (masthead) + Source Serif 4 (body) + Archivo Narrow (labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+  <a class="skip-link" href="#before">Skip to menu</a>
+
+  <!-- ============ STICKY HEADER ============ -->
+  <header class="site-header is-stuck" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Entrecôte home">
+        <img src="assets/icons/logo.svg" alt="" width="34" height="34" class="brand__mark" />
+        <span class="brand__name">Entrecôte</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-nav__link" href="index.html">Home</a>
+        <a class="site-nav__link is-active" href="menu.html" aria-current="page">The Card</a>
+      </nav>
+    </div>
+    <span class="scroll-progress" id="scrollProgress"></span>
+  </header>
+
+  <main id="top">
+    <!-- ============ MASTHEAD ============ -->
+    <section class="masthead" aria-label="Entrecôte Café de Paris">
+      <span class="masthead__halftone" aria-hidden="true"></span>
+      <p class="masthead__kicker reveal">The Card</p>
+      <h1 class="masthead__brand reveal" style="--d:.05s">Entrecôte</h1>
+      <p class="masthead__line2 reveal" style="--d:.12s">Café de Paris</p>
+      <p class="masthead__meta reveal" style="--d:.2s">Chez Boubier · Geneva · Est. 1930</p>
+      <p class="masthead__tagline reveal" style="--d:.28s">Toujours imitée, jamais égalée.</p>
+    </section>
+
+    <!-- ============ SECTION INDEX ============ -->
+    <nav class="subnav" id="subnav" aria-label="Menu sections">
+      <div class="subnav__track">
+        <a class="subnav__link" href="#before" data-sec="before">Before the Steak</a>
+        <a class="subnav__link" href="#cuts" data-sec="cuts">The Cuts</a>
+        <a class="subnav__link" href="#included" data-sec="included">Included</a>
+        <a class="subnav__link" href="#final" data-sec="final">The Final Act</a>
+        <a class="subnav__link" href="#beverages" data-sec="beverages">Beverages</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- ============ STORY ============ -->
+      <section class="story" aria-label="Our story">
+        <div class="story__block reveal">
+          <span class="story__label">The Secret Sauce</span>
+          <p class="story__text">In 1930, Chef Boubier invented a sauce so singular it outlived everything else he ever created — named after his restaurant on Rue Mont-Blanc 26, Geneva. Four generations later, one man holds the secret: <em>Mr. François Vouillamoz</em>, who prepares it in his laboratory beneath the original restaurant and ships it by air to every table. Inherited by one person per generation. Never sold. Never replicated.</p>
+        </div>
+        <div class="story__block reveal" style="--d:.1s">
+          <span class="story__label">The Ritual of the Table</span>
+          <p class="story__text">Your cut arrives raw and rested. The sauce is poured at your table, over a living flame — a tradition unchanged since 1930.</p>
+        </div>
+      </section>
+
+      <!-- ============ BEFORE THE STEAK ============ -->
+      <section class="menu-section" id="before" aria-label="Before the steak">
+        <div class="menu-section__head reveal">
+          <h2 class="menu-section__title">Before the Steak</h2>
+          <p class="menu-section__sub">Made in-house, daily</p>
+        </div>
+        <div class="dishlist reveal" style="--d:.05s">
+          <div class="dish">
+            <span class="dish__name">Fresh Bread, White &amp; Brown</span>
+            <span class="dish__desc">Baked daily, never reheated.</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name">Herb Butter de Maison</span>
+            <span class="dish__desc">Thyme, rosemary, parsley, coriander — piped to order.</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name">The Black Olive Dip</span>
+            <span class="dish__desc">Black olives blended smooth with premium olive oil.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ THE CUTS ============ -->
+      <section class="menu-section" id="cuts" aria-label="The cuts">
+        <div class="menu-section__head reveal">
+          <h2 class="menu-section__title">The Cuts</h2>
+          <p class="menu-section__sub">Served with The Chef's Salad and unlimited House Frites</p>
+        </div>
+
+        <div class="cuts">
+          <!-- Feature: Le Suprême -->
+          <article class="cut cut--feature reveal">
+            <div class="cut__main">
+              <span class="cut__kicker">Rarest Cut · While It Lasts</span>
+              <h3 class="cut__name">Le Suprême — Wagyu 9</h3>
+              <p class="cut__spec">Australian Wagyu Striploin · Marbling Score 9</p>
+              <p class="cut__desc">The fat is so dense it softens before the flame touches it. Limited daily — once gone, no second batch tonight.</p>
+            </div>
+            <div class="cut__aside">
+              <span class="cut__price"><span class="cur">SAR</span>575</span>
+              <div class="cut__foot">
+                <span class="cut__tag">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 4-4 5-4 9a4 4 0 0 0 8 0c0-1-1-2-1-2"/></svg>
+                  1000 Kcal
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Le Marbré -->
+          <article class="cut reveal">
+            <span class="cut__kicker">Wagyu Certified</span>
+            <div class="cut__head">
+              <h3 class="cut__name">Le Marbré — Wagyu 7</h3>
+              <span class="cut__price"><span class="cur">SAR</span>445</span>
+            </div>
+            <p class="cut__spec">Australian Wagyu Striploin · Marbling Score 7</p>
+            <p class="cut__desc">The point where fat becomes a flavour system. Deeply indulgent, perfectly balanced.</p>
+            <div class="cut__foot">
+              <span class="cut__tag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 4-4 5-4 9a4 4 0 0 0 8 0c0-1-1-2-1-2"/></svg>790 Kcal</span>
+            </div>
+          </article>
+
+          <!-- Le Noir -->
+          <article class="cut reveal" style="--d:.05s">
+            <span class="cut__kicker">Black Angus</span>
+            <div class="cut__head">
+              <h3 class="cut__name">Le Noir — Black Angus</h3>
+              <span class="cut__price"><span class="cur">SAR</span>390</span>
+            </div>
+            <p class="cut__spec">Black Angus Tenderloin · 200g</p>
+            <p class="cut__desc">A richer, more pronounced flavour — naturally smoother in texture, deeper in character.</p>
+            <div class="cut__foot">
+              <span class="cut__tag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 4-4 5-4 9a4 4 0 0 0 8 0c0-1-1-2-1-2"/></svg>880 Kcal</span>
+            </div>
+          </article>
+
+          <!-- Le Filet -->
+          <article class="cut reveal">
+            <span class="cut__kicker">Silk-Fine Texture</span>
+            <div class="cut__head">
+              <h3 class="cut__name">Le Filet</h3>
+              <span class="cut__price"><span class="cur">SAR</span>295</span>
+            </div>
+            <p class="cut__spec">Australian Tenderloin · 200g</p>
+            <p class="cut__desc">Lean, tender, virtually without resistance — it dissolves rather than chews.</p>
+            <div class="cut__foot">
+              <span class="cut__tag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 4-4 5-4 9a4 4 0 0 0 8 0c0-1-1-2-1-2"/></svg>700 Kcal</span>
+            </div>
+          </article>
+
+          <!-- The Classic -->
+          <article class="cut reveal" style="--d:.05s">
+            <span class="cut__kicker">Original · Geneva 1930</span>
+            <div class="cut__head">
+              <h3 class="cut__name">The Classic</h3>
+              <span class="cut__price"><span class="cur">SAR</span>220</span>
+            </div>
+            <p class="cut__spec">Australian Striploin · 200g</p>
+            <p class="cut__desc">The cut Monsieur Boubier chose in 1930. It has not needed to change since.</p>
+            <div class="cut__foot">
+              <span class="cut__tag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 4-4 5-4 9a4 4 0 0 0 8 0c0-1-1-2-1-2"/></svg>550 Kcal</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ INCLUDED WITH EVERY CUT (inverted band) ============ -->
+    <section class="note" id="included" aria-label="Included with every cut">
+      <div class="note__inner reveal">
+        <span class="note__kicker">No Extra Charge</span>
+        <h2 class="note__title">Included With Every Cut</h2>
+        <div class="note__items">
+          <div class="note__item">
+            <p class="note__item-name">The House Frites</p>
+            <p class="note__item-desc">Fresh potato, never frozen, double-fried.</p>
+          </div>
+          <div class="note__item">
+            <p class="note__item-name">The Chef's Salad</p>
+            <p class="note__item-desc">Fresh from Holland, 120g, tossed in our own Dijon-and-herb dressing at your table.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- ============ THE FINAL ACT ============ -->
+      <section class="menu-section" id="final" aria-label="Desserts">
+        <div class="menu-section__head reveal">
+          <h2 class="menu-section__title">The Final Act</h2>
+          <p class="menu-section__sub">A close worthy of the cut</p>
+        </div>
+        <div class="pricelist reveal" style="--d:.05s">
+          <div class="pricelist__col">
+            <div class="pricerow"><span class="pricerow__name">Crème Brûlée</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>55</span></div>
+            <div class="pricerow"><span class="pricerow__name">Chocolate Fondant</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>69</span></div>
+            <div class="pricerow"><span class="pricerow__name">Italian Cheesecake</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>50</span></div>
+          </div>
+          <div class="pricelist__col">
+            <div class="pricerow"><span class="pricerow__name">Tiramisu Maison</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>50</span></div>
+            <div class="pricerow"><span class="pricerow__name">Profiteroles</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>55</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BEVERAGES ============ -->
+      <section class="menu-section" id="beverages" aria-label="Beverages">
+        <div class="menu-section__head reveal">
+          <h2 class="menu-section__title">Beverages</h2>
+          <p class="menu-section__sub">Still &amp; sparkling, hot &amp; cold</p>
+        </div>
+        <div class="pricelist reveal" style="--d:.05s">
+          <div class="pricelist__col">
+            <div class="pricerow"><span class="pricerow__name">Saudi Cool</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>48</span></div>
+            <div class="pricerow"><span class="pricerow__name">Red Grape Sparkling</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>132</span></div>
+            <div class="pricerow"><span class="pricerow__name">Classic Mojito</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>35</span></div>
+            <div class="pricerow"><span class="pricerow__name">Fresh Orange Juice</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>35</span></div>
+            <div class="pricerow"><span class="pricerow__name">Lemonade</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>35</span></div>
+            <div class="pricerow"><span class="pricerow__name">Espresso</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>22</span></div>
+            <div class="pricerow"><span class="pricerow__name">Cappuccino</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>25</span></div>
+          </div>
+          <div class="pricelist__col">
+            <div class="pricerow"><span class="pricerow__name">Evian Still 750ml</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>33</span></div>
+            <div class="pricerow"><span class="pricerow__name">Evian Sparkling 750ml</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>39</span></div>
+            <div class="pricerow"><span class="pricerow__name">Soft Drinks</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>20</span></div>
+            <div class="pricerow"><span class="pricerow__name">Turkish Coffee</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>22</span></div>
+            <div class="pricerow"><span class="pricerow__name">Café Latte</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>25</span></div>
+            <div class="pricerow"><span class="pricerow__name">Tea</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>20</span></div>
+            <div class="pricerow"><span class="pricerow__name">Iced Tea</span><span class="pricerow__leader" aria-hidden="true"></span><span class="pricerow__price"><span class="cur">SAR</span>39</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ COLOPHON ============ -->
+    <footer class="colophon">
+      <img src="assets/icons/logo.svg" alt="" width="56" height="56" />
+      <p class="colophon__quote">"One plate. One sauce. Ninety-five years of secret."</p>
+      <span class="colophon__rule" aria-hidden="true"></span>
+      <p class="colophon__vat">All prices include 15% VAT · Please inform your server of any allergies or dietary restrictions.</p>
+      <p class="colophon__locations">Al Faisaliah Tower · Lumiere Centre · Laysen Valley · AlUla</p>
+    </footer>
+  </main>
+
+  <!-- ============ FLOATING ACTION BUTTONS ============ -->
+  <div class="fab-stack" id="fabStack">
+    <a class="fab ripple" href="index.html" aria-label="Back to home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></svg>
+    </a>
+    <button class="fab fab--search ripple" id="topFab" type="button" aria-label="Back to top" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+    </button>
+  </div>
+
+  <script>
+  (function () {
+    'use strict';
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var header = document.getElementById('siteHeader');
+    var progress = document.getElementById('scrollProgress');
+    var topFab = document.getElementById('topFab');
+
+    /* Reveal on scroll */
+    var reveals = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      reveals.forEach(function (el) { el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+      reveals.forEach(function (el) { io.observe(el); });
+    }
+
+    /* Active section in sub-nav */
+    var links = Array.prototype.slice.call(document.querySelectorAll('.subnav__link'));
+    var sections = links.map(function (l) { return document.getElementById(l.dataset.sec); }).filter(Boolean);
+    if ('IntersectionObserver' in window && sections.length) {
+      var navIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            var id = e.target.id;
+            links.forEach(function (l) { l.classList.toggle('is-active', l.dataset.sec === id); });
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+      sections.forEach(function (s) { navIo.observe(s); });
+    }
+
+    /* Header progress + back-to-top */
+    function onScroll() {
+      var y = window.pageYOffset || document.documentElement.scrollTop;
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (progress) progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+      if (topFab) topFab.hidden = y < 600;
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    if (topFab) topFab.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+
+    /* Ripple on tappable controls */
+    document.querySelectorAll('.ripple').forEach(function (el) {
+      el.addEventListener('pointerdown', function (e) {
+        var r = el.getBoundingClientRect();
+        var size = Math.max(r.width, r.height);
+        var rip = document.createElement('span');
+        rip.className = 'rip';
+        rip.style.cssText = 'width:' + size + 'px;height:' + size + 'px;left:' + (e.clientX - r.left) + 'px;top:' + (e.clientY - r.top) + 'px';
+        el.appendChild(rip);
+        setTimeout(function () { rip.remove(); }, 600);
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
